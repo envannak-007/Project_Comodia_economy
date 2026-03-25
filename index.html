@@ -18,21 +18,34 @@
             box-sizing: border-box;
             font-family: "Poppins", "Battambang", sans-serif;
         }
-        body{
-            top: 80px;
+        html {
+            font-size: clamp(14px, 1.1vw, 18px);
         }
+
+        body {
+            padding-top: 80px;
+        }
+
         /* header */
         .navbar_item {
             transition: 0.3s;
         }
+
         .navbar_item:hover {
             text-decoration: underline;
         }
-         /* for Logo */
-        .logo{
-            width: 180px;
-            height: 80px;
+
+        /* Logo responsive */
+        .logo {
+            width: clamp(120px, 10vw, 150px);
+            height: auto;
         }
+
+        /* Navbar text responsive */
+        .navbar-nav .nav-link {
+            font-size: clamp(14px, 1vw, 18px);
+        }
+
         /* for PC */
         @media (min-width:768px) {
             .navbar-group {
@@ -46,9 +59,12 @@
                 transform: scale(1.03);
             }
         }
+
+        /* Login button */
         .navbar-login {
             background: blue;
             border-radius: 10px;
+            font-size: clamp(14px, 1vw, 18px);
         }
 
         .navbar-login a {
@@ -60,21 +76,26 @@
             .navbar-nav {
                 text-align: center;
             }
+
             .navbar-group {
                 margin: 5px 0;
             }
-             .navbar-login {
+
+            .navbar-login {
                 width: 100%;
             }
         }
+
         .contact {
             width: 100%;
             border-radius: 5px;
             overflow: hidden;
         }
+
         .contact_item {
             transition: 0.3s;
         }
+
         .contact_item:hover {
             background: black;
             color: white;
@@ -82,7 +103,6 @@
         }
     </style>
 </head>
-
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -94,8 +114,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto fs-5">
-                    <li class="nav-item navbar-group">
+                <ul class="navbar-nav ms-auto">
+                <li class="nav-item navbar-group">
                         <a class="nav-link navbar_item" href="#">ទំព័រដើម</a>
                     </li>
                     <li class="nav-item navbar-group">
@@ -115,17 +135,19 @@
                             ទំនាក់ទំនង
                         </a>
                         <ul class="dropdown-menu p-2">
-                            <li class="contact"><a class="dropdown-item contact_item" href="https://www.facebook.com/share/18PbbZ5Bbs/">Facebook</a></li>
-                            <li class="contact"><a class="dropdown-item contact_item" href="https://t.me/ENVannak">Telegram</a></li>
-                            <li class="contact"><a class="dropdown-item contact_item" href="mailto:envannak093@gmail.com">Email</a></li>
+                            <li class="contact"><a class="dropdown-item contact_item"
+                                    href="https://www.facebook.com/share/18PbbZ5Bbs/">Facebook</a></li>
+                            <li class="contact"><a class="dropdown-item contact_item"
+                                    href="https://t.me/ENVannak">Telegram</a></li>
+                            <li class="contact"><a class="dropdown-item contact_item"
+                                    href="mailto:envannak093@gmail.com">Email</a></li>
                         </ul>
                     </li>
                     <li class="nav-item navbar-login ms-md-3">
-                        <a class="nav-link " href="form.html">Log in</a>
+                        <a class="nav-link" href="form.html">Log in</a>
                     </li>
                 </ul>
             </div>
-
         </div>
     </nav>
 
